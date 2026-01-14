@@ -8,6 +8,12 @@
         content="SI-Panggoaran - Sistem Pelaporan Magang Orientasi dan Kunjungan Balai Besar POM di Medan">
     <title>SI-Panggoaran | BBPOM di Medan</title>
 
+    <link rel="icon" type="image/png" href="<?= base_url('public/assets/favicon/favicon-96x96.png') ?>" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="<?= base_url('public/assets/favicon/favicon.svg') ?>" />
+    <link rel="shortcut icon" href="<?= base_url('public/assets/favicon/favicon.ico') ?>" />
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('public/assets/favicon/apple-touch-icon.png') ?>" />
+    <link rel="manifest" href="<?= base_url('public/assets/favicon/site.webmanifest') ?>" />
+
     <!-- TailwindCSS -->
     <link rel="stylesheet" href="<?= base_url('public/css/output.css') ?>">
 
