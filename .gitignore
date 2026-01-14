@@ -1,0 +1,41 @@
+# --- CodeIgniter 3 Core ---
+/system/
+/user_guide/
+
+# --- Logs & Cache ---
+# Kita mengabaikan semua file log tapi tetap menyisakan index.html agar folder tetap ada
+application/logs/*.php
+application/logs/*.log
+application/logs/*.html
+!application/logs/index.html
+
+application/cache/*
+!application/cache/index.html
+
+# --- Configuration (Sangat Disarankan) ---
+# Mengabaikan konfigurasi lokal agar tidak bentrok dengan tim lain/server
+application/config/database.php
+application/config/config.php
+
+# --- Composer ---
+vendor/
+
+# --- User Uploads ---
+# Jika proyek Anda memiliki fitur upload, abaikan isinya agar file testing tidak masuk ke repo
+/public/uploads/*
+!public/uploads/index.html
+
+# --- IDE & OS Files ---
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Temp & Backup ---
+*.bak
+*.tmp
+*.sql
+*.log
