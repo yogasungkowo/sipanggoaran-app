@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="light">
 
 <head>
     <meta charset="UTF-8">
@@ -29,6 +29,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         /* Section visibility */
@@ -47,7 +48,6 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -71,7 +71,73 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Dark Mode Styles */
+        html.dark body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+
+        html.dark .bg-white {
+            background-color: #1e293b !important;
+        }
+
+        html.dark .bg-slate-50 {
+            background-color: #0f172a !important;
+        }
+
+        html.dark .text-slate-800 {
+            color: #e2e8f0 !important;
+        }
+
+        html.dark .text-slate-600 {
+            color: #94a3b8 !important;
+        }
+
+        html.dark .text-slate-700 {
+            color: #cbd5e1 !important;
+        }
+
+        html.dark .border-slate-100,
+        html.dark .border-slate-200 {
+            border-color: #334155 !important;
+        }
+
+        html.dark .shadow-lg,
+        html.dark .shadow-xl,
+        html.dark .shadow-md {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+        }
+
+        html.dark .hover\:bg-slate-50:hover {
+            background-color: #334155 !important;
+        }
+
+        html.dark .hover\:bg-blue-50:hover {
+            background-color: #1e3a5f !important;
+        }
+
+        /* Dark mode toggle button animation */
+        .theme-toggle {
+            transition: transform 0.3s ease;
+        }
+        .theme-toggle:hover {
+            transform: rotate(15deg) scale(1.1);
+        }
     </style>
+
+    <!-- Dark Mode Script (runs before body to prevent flash) -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.remove('light');
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
 </head>
 
 <body class="bg-slate-50 text-slate-800">

@@ -1,23 +1,41 @@
-<!-- Floating Toggle Button (Desktop) -->
-<button id="sidebar-toggle"
-    class="hidden lg:flex fixed left-4 top-4 z-[60] w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-full shadow-lg hover:shadow-xl items-center justify-center text-white transition-all duration-300 hover:scale-110">
-    <svg id="toggle-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
-    <svg id="toggle-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-    </svg>
-</button>
+<!-- Floating Toggle Buttons (Desktop) -->
+<div id="floating-buttons" class="hidden lg:flex fixed left-4 top-4 z-[60] gap-2 transition-all duration-300">
+    <!-- Sidebar Toggle -->
+    <button id="sidebar-toggle"
+        class="w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110">
+        <svg id="toggle-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="toggle-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+
+    <!-- Dark Mode Toggle -->
+    <button id="theme-toggle-desktop"
+        class="theme-toggle w-14 h-14 bg-gradient-to-br from-amber-400 to-orange-500 dark:from-slate-700 dark:to-slate-800 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110">
+        <!-- Sun Icon (shown in dark mode) -->
+        <svg id="sun-icon-desktop" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <!-- Moon Icon (shown in light mode) -->
+        <svg id="moon-icon-desktop" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+    </button>
+</div>
 
 <!-- Sidebar Navigation (Desktop) -->
 <aside id="sidebar"
     class="hidden fixed left-0 top-0 h-full w-72 bg-white shadow-2xl z-50 transition-all duration-300 flex-col">
     <!-- Logo -->
-    <div class="p-4 pt-20 border-b flex items-center gap-3">
-        <img src="<?= base_url('public/assets/img/BADAN_POM.png') ?>" alt="BPOM Logo" class="w-12 h-12 object-contain">
+    <div class="p-5 border-b flex items-center gap-4">
+        <img src="<?= base_url('public/assets/img/BADAN_POM.png') ?>" alt="BPOM Logo" class="w-16 h-16 object-contain">
         <div>
-            <h1 class="text-sm font-bold text-blue-800 leading-tight">SI-PANGGOARAN</h1>
-            <p class="text-xs text-slate-500">BBPOM Medan</p>
+            <h1 class="text-lg font-bold text-blue-800 leading-tight">SI-PANGGOARAN</h1>
+            <p class="text-sm text-slate-500">BBPOM di Medan</p>
         </div>
     </div>
 
